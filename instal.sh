@@ -234,7 +234,7 @@ clear
     echo -e "${red}                ♦️ CUSTOM SETUP DOMAIN VPS ♦️   ${NC}"
     echo -e "\e[32m      ┌───────────────────────────────────────────────┐\033[0m"
     echo "          1. Gunakan Domain Dari Script 1"
-    echo "          2. Gunakan Domain Dari Script 2"
+    echo "          2. Gunakan Domain Sendiri"
     echo -e "\e[32m      └───────────────────────────────────────────────┘\033[0m"
     read -rp " Tentukan domain anda : " dom 
 
