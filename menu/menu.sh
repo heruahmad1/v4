@@ -5,27 +5,28 @@ date_list=$(date +"%Y-%m-%d" -d "$data_server")
 ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
 CITY=$(curl -s ipinfo.io/city )
 data_ip="https://raw.githubusercontent.com/heruahmad1/permission/main/ipmini"
+#IZIN SCRIPT
+MYIP=$(curl -sS ipv4.icanhazip.com)
+echo -e "\e[32mloading...\e[0m"
+clear
 checking_sc() {
-    useexp=$(curl -sS $data_ip | grep $ipsaya | awk '{print $3}')
-    if [[ $date_list < $useexp ]]; then
-        echo -ne
-    else
-        echo -e "\033[1;36m┌─────────────────────────────────────────────────┐\033[0m"
-        echo -e "\033[1;36m \033[0m ${COLBG1}          ${WH}• AUTOSCRIPT PREMIUM •               \033[0m \033[1;36m $NC"
-        echo -e "\033[1;36m└─────────────────────────────────────────────────┘\033[0m"
-        echo -e "\033[1;36m┌─────────────────────────────────────────────────┐\033[0m"
-        echo -e "            ${RED}PERMISSION DENIED !\033[0m"
-        echo -e "   \033[0;33mYour VPS\033[0m $ipsaya \033[0;33mHas been Banned\033[0m"
-        echo -e "     \033[0;33mBuy access permissions for scripts\033[0m"
-        echo -e "             \033[0;33mContact Your Admin \033[0m"
-        echo -e "     \033[0;36mTelegram\033[0m: https://t.me/heruahmad"
-        echo -e "\033[1;36m└─────────────────────────────────────────────────┘\033[0m"
-        exit
-    fi
+  useexp=$(wget -qO- $data_ip | grep $ipsaya | awk '{print $3}')
+  if [[ $date_list < $useexp ]]; then
+    echo -ne
+  else
+    echo -e "\033[1;93m────────────────────────────────────────────\033[0m"
+    echo -e "\033[42m          404 NOT FOUND AUTOSCRIPT          \033[0m"
+    echo -e "\033[1;93m────────────────────────────────────────────\033[0m"
+    echo -e ""
+    echo -e "            ${RED}PERMISSION DENIED !${NC}"
+    echo -e "   \033[0;33mYour VPS${NC} $ipsaya \033[0;33mHas been Banned${NC}"
+    echo -e "     \033[0;33mBuy access permissions for scripts${NC}"
+    echo -e "\033[1;93m────────────────────────────────────────────\033[0m"
+    exit
+  fi
 }
 checking_sc
-Name=$(curl -sS https://raw.githubusercontent.com/heruahmad1/permission/main/ipmini | grep $ipsaya | awk '{print $2}')
-# =========================================
+echo -e "\e[32mloading...\e[0m"
 vlx=$(grep -c -E "^#& " "/etc/xray/config.json")
 let vla=$vlx/2
 vmc=$(grep -c -E "^### " "/etc/xray/config.json")
