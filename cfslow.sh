@@ -8,7 +8,7 @@ apt install jq curl -y
 DOMAIN=hrvpn.my.id
 DAOMIN=$(cat /etc/xray/domain)
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
-SUB_DOMAIN=${sub}.hrvpn.my.id
+SUB_DOMAIN=${sub}.brotherssh.me
 NS_DOMAIN=ns.${SUB_DOMAIN}
 CF_ID=ahmadkhairudin1996@gmail.com
 CF_KEY=ab4ab65e0df030c3bb23f6d8cee27f2773fd8
