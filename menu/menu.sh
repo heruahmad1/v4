@@ -257,7 +257,7 @@ case $opt in
 3) clear ; menu-vless ;;
 4) clear ; menu-tr ;;
 5) clear ; menu-trgo ;;
-6) clear ; menu-backup ;;
+6) clear ; menu-bckp ;;
 7) clear ; bot ;;
 8) clear ; menu-set ;;
 0) clear ; menu ;;
