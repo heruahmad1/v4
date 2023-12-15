@@ -6,22 +6,6 @@ date_list=$(date +"%Y-%m-%d" -d "$data_server")
 ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
 CITY=$(curl -s ipinfo.io/city )
 data_ip="https://raw.githubusercontent.com/heruahmad1/permission/main/ipmini"
-checking_sc() {
-    useexp=$(curl -sS $data_ip | grep $ipsaya | awk '{print $3}')
-    if [[ $date_list < $useexp ]]; then
-        echo -ne
-    else
-        echo -e ""
-        echo -e "                  • AUTOSCRIPT LITE •" 
-        echo -e ""
-        echo -e "                  PERMISSION DENIED ! "
-        sleep 7
-       exit
-    fi
-}
-checking_sc
-Name=$(curl -sS https://raw.githubusercontent.com/heruahmad1/permission/main/ipmini | grep $ipsaya | awk '{print $2}')
-# =========================================
 red='\e[1;31m'
 green='\e[0;32m'
 yell='\e[1;33m'
