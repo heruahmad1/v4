@@ -12,9 +12,9 @@ checking_sc() {
         echo -ne
     else
         echo -e ""
-        echo -e "                  • AUTOSCRIPT LITE •" | lolcat
+        echo -e "                  • AUTOSCRIPT LITE •" 
         echo -e ""
-        echo -e "                  PERMISSION DENIED ! |" lolcat
+        echo -e "                  PERMISSION DENIED ! "
         sleep 7
        exit
     fi
