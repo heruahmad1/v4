@@ -116,6 +116,8 @@ wget -O restarts "https://raw.githubusercontent.com/heruahmad1/v4/main/menu/rest
 wget -O bw "https://raw.githubusercontent.com/heruahmad1/v4/main/menu/bw.sh"
 
 
+wget -O user-lock "https://raw.githubusercontent.com/heruahmad1/v4/main/ssh/user-lock.sh"
+wget -O user-unlock "https://raw.githubusercontent.com/heruahmad1/v4/main/ssh/user-unlock.sh"
 wget -O xp "https://raw.githubusercontent.com/heruahmad1/v4/main/ssh/xp.sh"
 wget -O sshws "https://raw.githubusercontent.com/heruahmad1/v4/main/ssh/sshws.sh"
 wget -O status "https://raw.githubusercontent.com/heruahmad1/v4/main/status.sh"
@@ -155,6 +157,8 @@ chmod +x about
 chmod +x auto-reboot
 chmod +x restarts
 chmod +x bw
+chmod +x user-lock
+chmod +x user-unlock
 
 chmod +x xp
 chmod +x acs-set
