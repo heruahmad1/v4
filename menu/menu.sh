@@ -166,6 +166,17 @@ resv2r="${green}🍀${NC}"
 else
 resv2r="${red}🍁${NC}"
 fi
+vlx=$(grep -c -E "^#& " "/etc/xray/config.json")
+let vla=$vlx/2
+vmc=$(grep -c -E "^### " "/etc/xray/config.json")
+let vma=$vmc/2
+ssh1="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
+
+trx=$(grep -c -E "^#! " "/etc/xray/config.json")
+let tra=$trx/2
+ssx=$(grep -c -E "^## " "/etc/xray/config.json")
+let ssa=$ssx/2
+
 
 clear
 echo -e ""
@@ -179,12 +190,12 @@ echo -e "${red}                  ♦️ SERVER INFORMATION ♦️   ${NC}"
 echo -e "${BIYellow}                 ──────────────────────────${NC}"
 echo -e "${BIWhite}      □ Server Uptime       = ${GREEN}$( uptime -p  | cut -d " " -f 2-10000 ) ${NC}"
 echo -e "${BIWhite}      □ Operating System    = ${GREEN}$( cat /etc/os-release | grep -w PRETTY_NAME | sed 's/PRETTY_NAME//g' | sed 's/=//g' | sed 's/"//g' )${NC}"
-echo -e "${BIWhite}      □ ISP VPS             = ${GREEN}${ISP} ${NC}"           
-echo -e "${BIWhite}      □ CITY                = ${GREEN}${CITY} ${NC}"
+echo -e "${BIWhite}      □ ISP VPS             = ${GREEN}$(curl -s ipinfo.io/org | cut -d " " -f 2-10 ) ${NC}"           
+echo -e "${BIWhite}      □ CITY                = ${GREEN}$(curl -s ipinfo.io/city ) ${NC}"
 echo -e "${BIWhite}      □ IP-VPS              = ${GREEN}$(curl -sS ipv4.icanhazip.com)${NC}"           
 echo -e "${BIWhite}      □ Current Domain      = ${GREEN}$( cat /etc/xray/domain )${NC}"
 echo -e "${BIWhite}      □ NS Domain           = ${GREEN}$(cat /root/nsdomain)${NC}"
-echo -e " ${BIWhite}     □ User script Exp     = ${GREEN}$useexp ${NC} \033[1;31m$Name \e[0m${NC} "
+echo -e " ${BIWhite}     □ User script Exp     = ${GREEN}$exp ${NC} \033[1;31m$Name \e[0m${NC} "
 echo -e "${BIYellow}  ┌─────────────────────────────────────────────────────┐${NC}" 
 echo -e "${BIYellow}  │\033[0m ${BOLD}${YELLOW}  ---- SSH ---- VMESS ---- VLESS ---- TROJAN ----$NC" 
 echo -e "${BIYellow}  │\033[0m ${BIWhite}        $ssh1        $vma          $vla           $tra $NC" 
