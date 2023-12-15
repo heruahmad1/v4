@@ -120,8 +120,9 @@ wget -O user-unlock "https://raw.githubusercontent.com/heruahmad1/v4/main/ssh/us
 wget -O xp "https://raw.githubusercontent.com/heruahmad1/v4/main/ssh/xp.sh"
 wget -O sshws "https://raw.githubusercontent.com/heruahmad1/v4/main/ssh/sshws.sh"
 wget -O status "https://raw.githubusercontent.com/heruahmad1/v4/main/status.sh"
-wget -O /usr/bin/backup "https://raw.githubusercontent.com/heruahmad1/v4/main/backup/backup.sh" && chmod +x /usr/bin/backup
-wget -O /usr/bin/restore "https://raw.githubusercontent.com/heruahmad1/v4/main/backup/restore.sh" && chmod +x /usr/bin/restore
+wget -O /usr/bin/backup "https://raw.githubusercontent.com/botak8/v4/main/backup/backup.sh" && chmod +x /usr/bin/backup
+wget -O /usr/bin/restore "https://raw.githubusercontent.com/botak8/v4/main/backup/restore.sh" && chmod +x /usr/bin/restore
+wget -O /usr/bin/menu-bckp "https://raw.githubusercontent.com/botak8/v4/main/backup/menu-backup.sh" && chmod +x /usr/bin/menu-bckp
 wget -O /usr/bin/update "https://raw.githubusercontent.com/heruahmad1/v4/main/update.sh" && chmod +x /usr/bin/update
 wget -O jam "https://raw.githubusercontent.com/heruahmad1/v4/main/jam.sh" && chmod +x /usr/bin/jam
 wget -O bot "https://raw.githubusercontent.com/heruahmad1/v4/main/bot.sh" && chmod +x /usr/bin/bot
