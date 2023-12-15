@@ -91,7 +91,7 @@ wget -O menu-trgo "https://raw.githubusercontent.com/heruahmad1/v4/main/menu/men
 wget -O menu-tr "https://raw.githubusercontent.com/heruahmad1/v4/main/menu/menu-trojan.sh"
 
 # menu ssh ovpn
-wget -O menu-sshh "https://raw.githubusercontent.com/heruahmad1/v4/main/menu/menu-sshh.sh"
+wget -O menu-sshh "https://raw.githubusercontent.com/heruahmad1/v4/main/menu/menu-ssh.sh"
 wget -O usernew "https://raw.githubusercontent.com/heruahmad1/v4/main/ssh/usernew.sh"
 wget -O trial "https://raw.githubusercontent.com/heruahmad1/v4/main/ssh/trial.sh"
 wget -O renew "https://raw.githubusercontent.com/heruahmad1/v4/main/ssh/renew.sh"
