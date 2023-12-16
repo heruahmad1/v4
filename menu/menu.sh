@@ -219,7 +219,7 @@ echo -e "\e[33m ───│\033[0m  ${BICyan}   ├─┤│ │ │ │ │└
 echo -e "\e[33m ───│\033[0m  ${BICyan}   ┴ ┴└─┘ ┴ └─┘└─┘└─┘┴└─┴┴   ┴   ┴─┘┴ ┴ └─┘  \033[0m \e[33m │───\033[0m"
 echo -e "\e[33m ───│\033[0m  ${BIWhite}       HR-vpn (C)https://t.me/HRstores      \033[0m \e[33m  │───\033[0m"
 echo -e "\e[33m    └─────────────────────────────────────────────────┘\033[0m"
-echo -e "                  ♦️ SERVER INFORMATION ♦️  " | lolcat
+echo -e "                  🔰 SERVER INFORMATION 🔰  " | lolcat
 echo -e "${BIYellow}                 ──────────────────────────${NC}"
 echo -e "${BIWhite}      • ${BICyan}Sever Uptime        ${NC}= $( uptime -p  | cut -d " " -f 2-10000 ) "
 echo -e "${BIWhite}      • ${BICyan}Current Time        ${NC}= $( date -d "0 days" +"%d-%m-%Y | %X" )"
@@ -232,8 +232,8 @@ echo -e "${BIWhite}      • ${BICyan}NS Domain           ${NC}= $(cat /root/nsd
 echo -e "${BIWhite}      • ${BICyan}User Script Exp     ${NC}= ${BIYellow}$Name (${NC}${RED} $dayleft Days ${NC}${YELLOW})${NC}"
 echo -e "${BIWhite}      • ${BICyan}Developer           ${NC}= HR-vpn Tunneling ${NC}"
 echo -e "${BIYellow}  ┌─────────────────────────────────────────────────────┐${NC}" 
-echo -e "          SSH      VMESS        VLESS      TROJAN     " | lolcat
-echo -e "   ${BIWhite}        $ssh1          $vma           $vla          $tra $NC" 
+echo -e "         SSH       VMESS        VLESS       TROJAN     " | lolcat
+echo -e "  ${BIWhite}        $ssh1          $vma            $vla           $tra $NC" 
 echo -e "${BIYellow}  └─────────────────────────────────────────────────────┘${NC}"  
 echo -e "${BIWhite}     SSH ${NC}: $ressh"" ${BIWhite}  NGINX ${NC}: $resngx"" ${BIWhite}    XRAY ${NC}: $resv2r"" ${BIWhite}  TROJAN ${NC}: $resv2r"
 echo -e "${BIWhite}        STUNNEL ${NC}: $resst" "${BIWhite}   DROPBEAR ${NC}: $resdbr" "${BIWhite}   SSH-WS ${NC}: $ressshws"
@@ -244,7 +244,7 @@ echo -e "${BIYellow}  │  ${BICyan}[${BIWhite} 3 ${BICyan}] VLESS MANAGER   "  
 echo -e "${BIYellow}  │  ${BICyan}[${BIWhite} 4 ${BICyan}] TROJAN MANAGER  "       "    ${BICyan}[${BIWhite} 8 ${BICyan}] OTHER SETING  ${NC}" "${BIYellow}   │"
 echo -e "${BIYellow}  └─────────────────────────────────────────────────────┘${NC}"
 echo -e "${BIYellow}  ┌─────────────────────────────────────────────────────┐${NC}"
-echo -e "${BIYellow}  │ $NC${BIWhite}HARI ini${NC}: ${RED}$ttoday$NC ${BIWhite}KEMARIN${NC}: ${RED}$tyest$NC ${BIWhite}BULAN${NC}: ${RED}$tmon$NC $NC"
+echo -e "${BIYellow}  │ $NC${BIWhite}HARI ini${NC}: ${BIYellow}$ttoday$NC ${BIWhite}KEMARIN${NC}: ${BIYellow}$tyest$NC ${BIWhite}BULAN${NC}: ${BIYellow}$tmon$NC $NC"
 echo -e "${BIYellow}  └─────────────────────────────────────────────────────┘${NC}"
 echo -e "                   Version script  3.0.1           \E[0m" | lolcat
 echo -e "                ${BOLD}${BIRed}━━━${BIWhite}━━━${GREEN}━━━${BIYellow}━━━${BIWhite}━━━${BICyan}━━━${BIPurple}━━━${BIWhite}━━━${BIRed}━━━${NC}"
